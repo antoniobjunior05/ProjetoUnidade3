@@ -1,12 +1,18 @@
 #ifndef FIGURAGEOMETRICA_H
 #define FIGURAGEOMETRICA_H
+#include "Sculptor.h"
 
+class FiguraGeometrica {
 
-class FiguraGeometrica{
+protected:
+  
+
 public:
-    FiguraGeometrica();
-    // FUNCAO VIRTUAL PURA TORNA A CLASSE ABSTRATA
-    virtual void draw()=0;
-};
-
-#endif // FIGURAGEOMETRICA_H
+  float r,g,b; // Cores
+  float a; // Transparencia
+  FiguraGeometrica () {};
+  virtual ~FiguraGeometrica () {};
+  virtual void draw (Sculptor &s) = 0; 
+ 
+  };
+#endif
